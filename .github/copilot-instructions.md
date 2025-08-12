@@ -49,10 +49,11 @@ Each resource is implemented as a separate module in the `modules/` directory.
 - Ensure `public_network_access_enabled` is set as 'false'
 - Confirm correct use of `service_plan_id`, `runtime_name`, `runtime_version`, and storage settings.
 - Validate the use of `azurerm_service_plan` with `sku_name = "FC1"`.
-- Ensure 'virtual_network_subnet_id' variable is marked as required (no default value) 
+- Ensure virtual network integration is enabled by default.
 - Confirm 'webdeploy_publish_basic_authentication_enabled' is set as 'false'.
-- Ensure minimum tls version is 1.2
-- Ensure 'identity' type value is set as 'SystemAssigned'.
+- Enforcing minimum TLS version 1.2.
+- Requiring the 'identity' variable to be set as 'SystemAssigned'.
+- Mandating a README.md with usage examples and variable descriptions.
 
 ## Security & Networking
 - If public access is enabled, ensure it is justified and documented.

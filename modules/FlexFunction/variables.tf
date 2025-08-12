@@ -308,3 +308,11 @@ variable "FlexFunction" {
     storage_authentication_type    = string
   })
 }
+
+
+variable "test_dummy_var" {
+  description = "dummy variable created not using"
+  type = string
+  default = "dummy"
+  
+}

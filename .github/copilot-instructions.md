@@ -14,7 +14,7 @@ Each resource is implemented as a separate module in the `modules/` directory.
 
 ### General
 - Ensure all Terraform resources follow Azure and Terraform best practices.
-- Each module must have `main.tf`, `variables.tf`, and `outputs.tf`.
+- Each module must have `main.tf`, `variables.tf`, `outputs.tf` and `README.md`.
 - Each module must have 'README.md' file with usage examples and variable descriptions.
 - All variables should have descriptions and types.
 - Outputs should be meaningful and used for inter-module wiring.

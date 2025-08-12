@@ -8,9 +8,9 @@ output "id" {
 }
 
 # Example output when using for_each
-# output "function_app_id" {
-#   value = try(azurerm_function_app_flex_consumption.function_app_flex["enabled"].id, null)
-# }
+output "function_app_id" {
+  value = try(azurerm_function_app_flex_consumption.function_app_flex["enabled"].id, null)
+}
 
 
 # output "custom_domain_verification_id" {

@@ -15,6 +15,7 @@ Each resource is implemented as a separate module in the `modules/` directory.
 ### General
 - Ensure all Terraform resources follow Azure and Terraform best practices.
 - Each module must have `main.tf`, `variables.tf`, and `outputs.tf`.
+- Each module must have 'README.md' file with usage examples and variable descriptions.
 - All variables should have descriptions and types.
 - Outputs should be meaningful and used for inter-module wiring.
 
@@ -42,6 +43,16 @@ Each resource is implemented as a separate module in the `modules/` directory.
 ### Resource Group Module
 - Resource: `azurerm_resource_group`
 - Confirm variables for name and location.
+
+### Flex Function
+- Resource: `azurerm_function_app_flex_consumption`
+- Ensure `public_network_access_enabled` is set as 'false'
+- Confirm correct use of `service_plan_id`, `runtime_name`, `runtime_version`, and storage settings.
+- Validate the use of `azurerm_service_plan` with `sku_name = "FC1"`.
+- Confirm 'virtual_network_subnet_id' is a required variable.
+- Confirm 'webdeploy_publish_basic_authentication_enabled' is set as 'false'.
+- Ensure minimum tls version is 1.2
+- Ensure 'identity' is set as 'SystemAssigned'.
 
 ## Security & Networking
 - If public access is enabled, ensure it is justified and documented.

@@ -24,3 +24,15 @@ variable "account_replication_type" {
   type        = string
   default     = "LRS"
 }
+
+variable "storage_user_assigned_identity_id" {
+  description = "The ID of the user assigned identity to be used for customer managed key."
+  type        = string
+}
+
+variable "storage_key_vault_key_id" {
+  description = "The Key Vault key ID for customer managed keys."
+  type        = string
+  default     = null
+  
+}

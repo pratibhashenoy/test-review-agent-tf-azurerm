@@ -23,6 +23,7 @@ Each resource is implemented as a separate module in the `modules/` directory.
 - Resource: `azurerm_storage_account`
 - Confirm `public_network_access_enabled` is set as required (currently `false`).
 - Validate required variables and secure defaults.
+- Confirm `customer_managed_key` block is properly configured.
 
 ### Function App Module
 - Resource: `azurerm_function_app_flex_consumption`
